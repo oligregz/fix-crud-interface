@@ -1,6 +1,6 @@
 import './App.css'
 
-import GetData from './components/getData'
+import GetData from './components/getData/getData'
 
 function App() {
   return (

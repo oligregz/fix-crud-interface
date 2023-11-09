@@ -1,0 +1,28 @@
+ul {
+  list-style: none;
+}
+
+.values {
+  display: flex;
+  justify-content: space-between;
+  color: #000;
+}
+
+.values .id,
+.values .name,
+.values .email {
+  padding: 0.3rem; /* Espaçamento de 1rem */
+  border: 0.0625rem solid #000; /* Borda de 0.0625rem (equivalente a 1px) */
+  border-radius: 0.3125rem; /* Raio de borda de 0.3125rem (equivalente a 5px) */
+  background-color: beige;
+  margin: 0.1rem;
+}
+
+.get {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  border-color: black;
+  color: black;
+  background-color: beige;
+}
