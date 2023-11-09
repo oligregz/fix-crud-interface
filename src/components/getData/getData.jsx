@@ -5,22 +5,28 @@ import './style.css'
 const GetData = () => {
   const [users, setUsers] = useState({});
   const [renderUsers, setRenderUsers] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (users.users && users.users.length > 0) {
       console.log();
+      setLoading(false);
     }
   }, [users]);
 
   const searchUsers = async () => {
+    setLoading(true); // Mostra a mensagem de "Searching users"
+
     try {
       const usersData = await listUsers();
       setUsers(usersData);
+
       if (usersData.users && usersData.users.length > 0) {
         setRenderUsers(true);
       }
     } catch (error) {
       console.error("Error fetching users:", error);
+      setLoading(false);
     }
   };
 
@@ -36,6 +42,7 @@ const GetData = () => {
       <button className="get" onClick={searchUsers}>
         Get
       </button>
+      {loading && <p>Searching users...</p>}
       {renderUsers && (
         <ul>
           {users.users && users.users.map((user, index) => (
