@@ -26,6 +26,13 @@ const GetData = () => {
 
   return (
     <div className="data-getter">
+      <h3>
+        <a
+          href="https://github.com/oligregz/fix-crud/tree/deployment-architecture"
+          target="_blank"
+          rel="noopener noreferrer"
+        >{`🔗 API repository 🔗`}</a>
+      </h3>
       <button className="get" onClick={searchUsers}>
         Get
       </button>

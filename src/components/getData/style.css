@@ -20,9 +20,15 @@ ul {
 
 .get {
   padding: 0.5rem;
+  margin-top: 2rem;
   margin-bottom: 1rem;
   border-radius: 0.5rem;
   border-color: black;
   color: black;
   background-color: beige;
+}
+
+h3 a {
+  text-decoration: none;
+  color: rgb(107, 186, 182);
 }
